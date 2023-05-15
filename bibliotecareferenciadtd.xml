@@ -5,6 +5,7 @@
 ]>
 
 <biblioteca>
+
 <comentario>
    Existen tres tipos de documentos almacenados en la biblioteca: libros, revistas y periódicos.
 </comentario>
@@ -34,7 +35,7 @@
             Entre las dos exposiciones universales de Barcelona (1888 y 1929), con el telón [...].
         </sinopsis>
     </libro>
-    <!-- Un ejemplar de libro infantil -->
+    <!--Un ejemplar de libro infantil-->
     <libro tipo_clase="infantil" Id="L0002" autor="Juan Muñoz Martín" año_edición="1992" nombre_editorial="SM" n_páginas="126">
         <l_título>Fray Perico y su borrico</l_título>
         <capítulos>
@@ -63,7 +64,7 @@
 <revistas>
    <!-- Un ejemplar de revista informática -->
    <revista Id="R0001" tipo_clase="informática" n_páginas="202">
-      <!-- titulo y n_revista tendrían más sentido como atributo, pero el enunciado los exige elemento -->
+      <!--titulo y n_revista tendrían más sentido como atributo, pero el enunciado los exige elemento-->
       <r_título>
          PC Actual
       </r_título>
@@ -74,23 +75,23 @@
          0 Opinión, 1 Actualidad, 2 VNU Labs, 3 Mundo Mac, [...], 9 Club PC Actual
       </índice_de_contenido>
       <r_secciones>
-         <r_sección idsec="Sec0" n_páginas="3">
+         <r_sección n_sec="0" n_páginas="3">
             <s_título>Opinión</s_título>
             <s_contenido enlace="https://archive.org/details/pc-actual-128/page/n7"></s_contenido>
          </r_sección>
-         <r_sección idsec="Sec1" n_páginas="48">
+         <r_sección n_sec="1" n_páginas="48">
             <s_título>Actualidad</s_título>
             <s_contenido enlace="https://archive.org/details/pc-actual-128/page/n9"></s_contenido>
          </r_sección>
-         <r_sección idsec="Sec2" n_páginas="37">
+         <r_sección n_sec="2" n_páginas="37">
             <s_título>VNU Labs</s_título>
             <s_contenido enlace="https://archive.org/details/pc-actual-128/page/n57"></s_contenido>
          </r_sección>
-         <r_sección idsec="Sec3" n_páginas="5">
+         <r_sección n_sec="3" n_páginas="5">
             <s_título>Mundo Mac</s_título>
             <s_contenido enlace="https://archive.org/details/pc-actual-128/page/n95"></s_contenido>
          </r_sección>
-         <r_sección idsec="Sec9" n_páginas="7">
+         <r_sección n_sec="9" n_páginas="7">
             <s_título>Club PC Actual</s_título>
             <s_contenido enlace="https://archive.org/details/pc-actual-128/page/n195"></s_contenido>
          </r_sección>

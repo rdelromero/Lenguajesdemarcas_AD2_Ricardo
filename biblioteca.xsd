@@ -49,9 +49,7 @@ sequence. El orden será: comentario, libros, revistas, periódicos.-->
          <xs:element name="índice" type="xs:string"/>
          <xs:element name="sinopsis" type="xs:string"/>
          </xs:sequence>
-         
-<!--El atributo tipo_clase debe aparecer y debe ser uno de entre novela, infantil, didáctico-->
-
+         <!--El atributo tipo_clase debe aparecer y debe ser uno de entre novela, infantil, didáctico-->
          <xs:attribute name="tipo_clase" use="required">
             <xs:simpleType>
             <xs:restriction base="xs:string">
@@ -65,7 +63,6 @@ sequence. El orden será: comentario, libros, revistas, periódicos.-->
          </xs:attribute>
          <!--El atributo Id debe aparecer y consta de 5 caracteres siendo el primero de ellos la letra L y
          los cuatro siguientes dígitos-->
-
          <xs:attribute name="Id" use="required">
             <xs:simpleType>
             <xs:restriction base="xs:string">
@@ -101,8 +98,6 @@ sequence. El orden será: comentario, libros, revistas, periódicos.-->
                <xs:element name="título" type="xs:string"/>
                <xs:element name="contenido">
                   <xs:complexType>
-                  <xs:sequence>
-                  </xs:sequence>
                   <xs:attribute name="enlace" type="xs:string"/>            
                   </xs:complexType>
                </xs:element>
@@ -156,8 +151,6 @@ sequence. El orden será: comentario, libros, revistas, periódicos.-->
                   <xs:element name="título" type="xs:string"/>
                   <xs:element name="contenido">
                      <xs:complexType>
-                     <xs:sequence>
-                     </xs:sequence>
                      <xs:attribute name="enlace" type="xs:string"/>            
                      </xs:complexType>
                   </xs:element>

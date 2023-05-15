@@ -3,6 +3,7 @@
    <!ENTITY PRSO "Redacción de sección Opinión">
 ]>
 <biblioteca xsi:noNamespaceSchemaLocation="biblioteca.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
 <comentario>
    Existen tres tipos de documentos almacenados en la biblioteca: libros, revistas y periódicos.
 </comentario>
@@ -29,7 +30,6 @@
             Entre las dos exposiciones universales de Barcelona (1888 y 1929), con el telón [...].
         </sinopsis>
 	</libro>
-
     <!-- Un ejemplar de libro infantil -->
 	<libro tipo_clase="infantil" Id="L0002" autor="Juan Muñoz Martín" año_edición="1992" nombre_editorial="SM" n_páginas="126">
 		<título>Fray Perico y su borrico</título>
@@ -57,7 +57,8 @@
 </libros>
 
 <revistas><!--Un ejemplar de revista informática-->
-    <revista Id="R0001" tipo_clase="informática" n_páginas="202"><!-- titulo y n_revista tendrían más sentido como atributo, pero el enunciado los exige elemento -->
+    <revista Id="R0001" tipo_clase="informática" n_páginas="202">
+	<!--título y n_revista tendrían más sentido como atributo, pero el enunciado los exige elemento-->
 		<título>
             PC Actual
         </título>

@@ -1,31 +1,17 @@
-<!--El elemento biblioteca tiene cuatro hijos: comentario, libros, revistas, periódicos-->
+<!--El elemento biblioteca tiene cuatro hijos (comentario, libros, revistas, periódicos) que
+aparecen exactamente una vez y en ese orden-->
 <!ELEMENT biblioteca (comentario,libros,revistas,periódicos)>
-
 
 <!--El elemento comentario solo tiene texto-->
 <!ELEMENT comentario (#PCDATA)>
 
-
-
 <!--El elemento libros tiene un solo hijo (libro) que aparece al menos una vez-->
 <!ELEMENT libros (libro+)>
-
-
    <!--El elemento libro tiene:
-
-
-   cuatro hijos (l_título, capítulos, l_índice, sinopsis) que aparecen exactamente una vez,
-
-
+   cuatro hijos (l_título, capítulos, l_índice, sinopsis) que aparecen exactamente una vez y en se orden,
    seis atributos: tipo_clase, Id, autor, año_edición, nombre_editorial, n_páginas.
-
-
-   
-El atributo tipo_clase es obligatorio y debe ser uno de entre novela, infantil, didáctico.
-
-
+   El atributo tipo_clase es obligatorio y debe ser uno de entre novela, infantil, didáctico.
    El atributo nombre_editorial es opcional.-->
-
    <!ELEMENT libro (l_título, capítulos, l_índice, sinopsis)>
       <!ATTLIST libro
          tipo_clase (novela|infantil|didáctico) #REQUIRED
@@ -38,18 +24,9 @@ El atributo tipo_clase es obligatorio y debe ser uno de entre novela, infantil, 
       <!ELEMENT l_título (#PCDATA)>
       <!--El elemento capítulos tiene un solo hijo (capítulo) que aparece al menos una vez.-->
       <!ELEMENT capítulos (capítulo+)>
-      
-
-
-   <!--El elemento capítulo tiene:
-      
-
-
-   dos hijos (c_título, c_contenido) que aparecen exactamente una vez,
-      
-
-
-   dos atributos: n_cap, n_páginas. n_páginas es obligatorio-->
+         <!--El elemento capítulo tiene:
+         dos hijos (c_título, c_contenido) que aparecen exactamente una vez y en ese orden,
+         dos atributos: n_cap, n_páginas. n_páginas es obligatorio-->
          <!ELEMENT capítulo (c_título, c_contenido)>
             <!ATTLIST capítulo
                n_cap NMTOKEN #REQUIRED
@@ -77,7 +54,7 @@ El atributo tipo_clase es obligatorio y debe ser uno de entre novela, infantil, 
       <!ELEMENT r_secciones (r_sección+)>
          <!ELEMENT r_sección (s_título, s_contenido)>
             <!ATTLIST r_sección
-               idsec ID #REQUIRED
+               n_sec NMTOKEN #REQUIRED
                n_páginas NMTOKEN #IMPLIED
             >
             <!ELEMENT s_título (#PCDATA)>
