@@ -6,35 +6,58 @@
 
 <biblioteca>
 <comentario>
-   Existen tres tipos de documentos almacenados en la biblioteca: libros, revistas y periódicos
-.
+   Existen tres tipos de documentos almacenados en la biblioteca: libros, revistas y periódicos.
 </comentario>
    
 <libros>
-   <!-- Un ejemplar de libro infantil -->
-   <libro tipo_clase="infantil" Id="L0001" autor="Juan Muñoz Martín" edición="18" nombre_editorial="SM" n_páginas="126">
-      <l_título>Fray Perico y su borrico</l_título>
-      <capítulos>
-         <capítulo idcap="Cap1" n_páginas="4">
-            <c_título>Esto eran veinte frailes</c_título>
-            <c_contenido enlace="https://www..."></c_contenido>
-         </capítulo>
-         <capítulo idcap="Cap2" n_páginas="4">
-            <c_título>Fray Perico</c_título>
-            <c_contenido enlace="https://www..."></c_contenido>
-         </capítulo>
-         <capítulo idcap="Cap29" n_páginas="6">
-            <c_título>La campana</c_título>
-            <c_contenido enlace="https://www..."></c_contenido>
-         </capítulo>
-      </capítulos>            
-      <l_índice>
-          1 Esto eran veinte frailes, 2 Fray Perico, [...], 29 La campana
-      </l_índice>
-      <sinopsis>
-         Esto eran veinte frailes, en un antiguo convento cerquita de Salamanca. [...].
-      </sinopsis>
-   </libro>
+    <!--Un ejemplar de libro novela-->
+    <libro tipo_clase="novela" Id="L0001" autor="Eduardo Mendoza" año_edición="2003" nombre_editorial="Seix Barral" n_páginas="126">
+        <l_título>Fray Perico y su borrico</l_título>
+        <capítulos>
+            <capítulo n_cap="1" n_páginas="72">
+                <c_título></c_título>
+                <c_contenido enlace="https://archive.org/details/laciudaddelospro0000mend_q0d6/page/14"></c_contenido>
+            </capítulo>
+            <capítulo n_cap="2" n_páginas="78">
+                <c_título></c_título>
+                <c_contenido enlace="https://archive.org/details/laciudaddelospro0000mend_q0d6/page/86"></c_contenido>
+             </capítulo>
+             <capítulo n_cap="7" n_páginas="70">
+                 <c_título></c_título>
+                 <c_contenido enlace="https://archive.org/details/laciudaddelospro0000mend_q0d6/page/472"></c_contenido>
+             </capítulo>
+        </capítulos>            
+        <l_índice>
+            Capítulo I p.15, Capítulo II p.87, [...], Capítulo VII p.473.
+        </l_índice>
+        <sinopsis>
+            Entre las dos exposiciones universales de Barcelona (1888 y 1929), con el telón [...].
+        </sinopsis>
+    </libro>
+    <!-- Un ejemplar de libro infantil -->
+    <libro tipo_clase="infantil" Id="L0002" autor="Juan Muñoz Martín" año_edición="1992" nombre_editorial="SM" n_páginas="126">
+        <l_título>Fray Perico y su borrico</l_título>
+        <capítulos>
+            <capítulo n_cap="1" n_páginas="4">
+                <c_título>Esto eran veinte frailes</c_título>
+                <c_contenido enlace="https://www..."></c_contenido>
+            </capítulo>
+            <capítulo n_cap="2" n_páginas="4">
+                <c_título>Fray Perico</c_título>
+                <c_contenido enlace="https://www..."></c_contenido>
+             </capítulo>
+             <capítulo n_cap="29" n_páginas="6">
+                 <c_título>La campana</c_título>
+                 <c_contenido enlace="https://www..."></c_contenido>
+             </capítulo>
+        </capítulos>            
+        <l_índice>
+            1 Esto eran veinte frailes, 2 Fray Perico, [...], 29 La campana.
+        </l_índice>
+        <sinopsis>
+            Esto eran veinte frailes, en un antiguo convento cerquita de Salamanca. [...].
+        </sinopsis>
+    </libro>
 </libros>
       
 <revistas>

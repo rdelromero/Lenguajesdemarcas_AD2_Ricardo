@@ -6,9 +6,32 @@
 <comentario>
    Existen tres tipos de documentos almacenados en la biblioteca: libros, revistas y periódicos.
 </comentario>
+
 <libros>
+	<!--Un ejemplar de libro novela-->
+	<libro tipo_clase="novela" Id="L0001" autor="Eduardo Mendoza" año_edición="2003" nombre_editorial="Seix Barral" n_páginas="543">
+		<título>La ciudad de los prodigios</título>
+		<capítulos>
+			<capítulo idcap="1" n_páginas="72">
+				<contenido enlace="https://archive.org/details/laciudaddelospro0000mend_q0d6/page/14"/>
+			</capítulo>
+			<capítulo idcap="2" n_páginas="78">
+				<contenido enlace="https://archive.org/details/laciudaddelospro0000mend_q0d6/page/86"/>
+			</capítulo>
+			<capítulo idcap="7" n_páginas="70">
+				<contenido enlace="https://archive.org/details/laciudaddelospro0000mend_q0d6/page/472"/>
+			</capítulo>
+		</capítulos>
+		<índice>
+		    Capítulo I p.15, Capítulo II p.87, [...], Capítulo VII p.473.
+        </índice>
+		<sinopsis>
+            Entre las dos exposiciones universales de Barcelona (1888 y 1929), con el telón [...].
+        </sinopsis>
+	</libro>
+
     <!-- Un ejemplar de libro infantil -->
-	<libro tipo_clase="infantil" Id="L0001" autor="Juan Muñoz Martín" edición="18" nombre_editorial="SM" n_páginas="126">
+	<libro tipo_clase="infantil" Id="L0002" autor="Juan Muñoz Martín" año_edición="1992" nombre_editorial="SM" n_páginas="126">
 		<título>Fray Perico y su borrico</título>
 		<capítulos>
 			<capítulo idcap="1" n_páginas="4">
@@ -25,60 +48,63 @@
 			</capítulo>
 		</capítulos>
 		<índice>
-		    1 Esto eran veinte frailes, 2 Fray Perico, [...], 29 La campana
+		    1 Esto eran veinte frailes p.5, 2 Fray Perico p.9, [...], 29 La campana p.119.
         </índice>
 		<sinopsis>
             Esto eran veinte frailes, en un antiguo convento cerquita de Salamanca. [...].
         </sinopsis>
 	</libro>
 </libros>
-    <revistas><!-- Un ejemplar de revista informática -->
-		<revista Id="R0001" tipo_clase="informática" n_páginas="202"><!-- titulo y n_revista tendrían más sentido como atributo, pero el enunciado los exige elemento -->
-			<título>
-                PC Actual
-            </título>
-			<n_revista>
-                128
-            </n_revista>
-			<índice_de_contenido>
-                0 Opinión, 1 Actualidad, 2 VNU Labs, 3 Mundo Mac, [...], 9 Club PC Actual
-            </índice_de_contenido>
-			<secciones>
-			    <sección idsec="0" n_páginas="3">
-					<título>Opinión</título>
-					<contenido enlace="https://archive.org/details/pc-actual-128/page/n7"/>
-				</sección>
-				<sección idsec="1" n_páginas="48">
-					<título>Actualidad</título>
-					<contenido enlace="https://archive.org/details/pc-actual-128/page/n9"/>
-				</sección>
-				<sección idsec="2" n_páginas="37">
-					<título>VNU Labs</título>
-					<contenido enlace="https://archive.org/details/pc-actual-128/page/n57"/>
-				</sección>
-				<sección idsec="3" n_páginas="5">
-					<título>Mundo Mac</título>
-					<contenido enlace="https://archive.org/details/pc-actual-128/page/n95"/>
-				</sección>
-				<sección idsec="9" n_páginas="7">
-					<título>Club PC Actual</título>
-					<contenido enlace="https://archive.org/details/pc-actual-128/page/n195"/>
-				</sección>
-			</secciones>
-		</revista>
-	</revistas>
-<periódicos><!-- Un ejemplar de periódico nacional -->
+
+<revistas><!--Un ejemplar de revista informática-->
+    <revista Id="R0001" tipo_clase="informática" n_páginas="202"><!-- titulo y n_revista tendrían más sentido como atributo, pero el enunciado los exige elemento -->
+		<título>
+            PC Actual
+        </título>
+	    <n_revista>
+            128
+        </n_revista>
+	    <índice_de_contenido>
+            0 Opinión, 1 Actualidad, 2 VNU Labs, 3 Mundo Mac, [...], 9 Club PC Actual
+        </índice_de_contenido>
+	    <secciones>
+	        <sección idsec="0" n_páginas="3">
+		        <título>Opinión</título>
+				<contenido enlace="https://archive.org/details/pc-actual-128/page/n7"/>
+			</sección>
+			<sección idsec="1" n_páginas="48">
+				<título>Actualidad</título>
+				<contenido enlace="https://archive.org/details/pc-actual-128/page/n9"/>
+			</sección>
+			<sección idsec="2" n_páginas="37">
+				<título>VNU Labs</título>
+				<contenido enlace="https://archive.org/details/pc-actual-128/page/n57"/>
+			</sección>
+			<sección idsec="3" n_páginas="5">
+				<título>Mundo Mac</título>
+				<contenido enlace="https://archive.org/details/pc-actual-128/page/n95"/>
+			</sección>
+			<sección idsec="9" n_páginas="7">
+				<título>Club PC Actual</título>
+				<contenido enlace="https://archive.org/details/pc-actual-128/page/n195"/>
+			</sección>
+		</secciones>
+	</revista>
+</revistas>
+
+<periódicos>
+    <!--Un ejemplar de periódico nacional-->
 	<periódico Id="P0001" tipo_clase="nacional" nombre="ABC" fecha_publicación="2003-08-25" n_páginas="92">
 		<índice>
 		    1 Opinión, 2 Nacional, 3 Internacional, 4 Económica, 5 Deportes
         </índice>
 		<secciones>
 			<sección tipo_sección="opinión" n_páginas="5">
-				<artículo autor="Redacción de sección Opinión">
+				<artículo autor="&PRSO;">
 					<título>El referéndum que Chávez no quiere</título>
 					<contenido enlace="https://www.abc.es/opinion/abci-referendum-chavez-no-quiere-200308250300-203435_noticia.html"/>
 				</artículo>
-				<artículo autor="Redacción de sección Opinión">
+				<artículo autor="&PRSO;">
 					<título>Auge de los deportistas españoles</título>
 					<contenido enlace="https://www.abc.es/opinion/abci-auge-deportistas-espanoles-200308250300-203434_noticia.html"/>
 				</artículo>
@@ -98,4 +124,5 @@
 		</secciones>
 	</periódico>
 </periódicos>
+
 </biblioteca>

@@ -1,25 +1,62 @@
+<!--El elemento biblioteca tiene cuatro hijos: comentario, libros, revistas, periódicos-->
 <!ELEMENT biblioteca (comentario,libros,revistas,periódicos)>
 
+
+<!--El elemento comentario solo tiene texto-->
 <!ELEMENT comentario (#PCDATA)>
 
+
+
+<!--El elemento libros tiene un solo hijo (libro) que aparece al menos una vez-->
 <!ELEMENT libros (libro+)>
+
+
+   <!--El elemento libro tiene:
+
+
+   cuatro hijos (l_título, capítulos, l_índice, sinopsis) que aparecen exactamente una vez,
+
+
+   seis atributos: tipo_clase, Id, autor, año_edición, nombre_editorial, n_páginas.
+
+
+   
+El atributo tipo_clase es obligatorio y debe ser uno de entre novela, infantil, didáctico.
+
+
+   El atributo nombre_editorial es opcional.-->
+
    <!ELEMENT libro (l_título, capítulos, l_índice, sinopsis)>
       <!ATTLIST libro
          tipo_clase (novela|infantil|didáctico) #REQUIRED
          Id ID #REQUIRED
-         autor NMTOKENS #IMPLIED
-         edición NMTOKEN #REQUIRED
-         nombre_editorial NMTOKEN #IMPLIED
+         autor NMTOKENS #REQUIRED
+         año_edición NMTOKEN #REQUIRED
+         nombre_editorial NMTOKENS #IMPLIED
          n_páginas NMTOKEN #IMPLIED
       >
       <!ELEMENT l_título (#PCDATA)>
+      <!--El elemento capítulos tiene un solo hijo (capítulo) que aparece al menos una vez.-->
       <!ELEMENT capítulos (capítulo+)>
+      
+
+
+   <!--El elemento capítulo tiene:
+      
+
+
+   dos hijos (c_título, c_contenido) que aparecen exactamente una vez,
+      
+
+
+   dos atributos: n_cap, n_páginas. n_páginas es obligatorio-->
          <!ELEMENT capítulo (c_título, c_contenido)>
             <!ATTLIST capítulo
-               idcap ID #REQUIRED
+               n_cap NMTOKEN #REQUIRED
                n_páginas NMTOKEN #IMPLIED
             >
             <!ELEMENT c_título (#PCDATA)>
+            <!--El elemento c_contenido solo contiene un atributo: c_contenido-->
             <!ELEMENT c_contenido EMPTY>
                <!ATTLIST c_contenido
                   enlace CDATA #IMPLIED
@@ -49,7 +86,6 @@
                   enlace CDATA #IMPLIED
                >
                            
-
 <!ELEMENT periódicos (periódico+)>
    <!ELEMENT periódico (p_índice, p_secciones)>
       <!ATTLIST periódico
