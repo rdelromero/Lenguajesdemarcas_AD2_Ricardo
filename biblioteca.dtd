@@ -1,0 +1,77 @@
+<!ELEMENT biblioteca (comentario,libros,revistas,periódicos)>
+
+<!ELEMENT comentario (#PCDATA)>
+
+<!ELEMENT libros (libro+)>
+   <!ELEMENT libro (l_título, capítulos, l_índice, sinopsis)>
+      <!ATTLIST libro
+         tipo_clase (novela|infantil|didáctico) #REQUIRED
+         Id ID #REQUIRED
+         autor NMTOKENS #IMPLIED
+         edición NMTOKEN #REQUIRED
+         nombre_editorial NMTOKEN #IMPLIED
+         n_páginas NMTOKEN #IMPLIED
+      >
+      <!ELEMENT l_título (#PCDATA)>
+      <!ELEMENT capítulos (capítulo+)>
+         <!ELEMENT capítulo (c_título, c_contenido)>
+            <!ATTLIST capítulo
+               idcap ID #REQUIRED
+               n_páginas NMTOKEN #IMPLIED
+            >
+            <!ELEMENT c_título (#PCDATA)>
+            <!ELEMENT c_contenido EMPTY>
+               <!ATTLIST c_contenido
+                  enlace CDATA #IMPLIED
+               >
+      <!ELEMENT l_índice (#PCDATA)>
+      <!ELEMENT sinopsis (#PCDATA)>
+
+<!ELEMENT revistas (revista+)>
+   <!ELEMENT revista (r_título, n_revista, índice_de_contenido, r_secciones)>
+      <!ATTLIST revista
+         Id ID #REQUIRED 
+         tipo_clase (informática|corazón|coches|investigación|otras) #REQUIRED
+         n_páginas NMTOKEN #IMPLIED
+      >
+      <!ELEMENT r_título (#PCDATA)>
+      <!ELEMENT n_revista (#PCDATA)>
+      <!ELEMENT índice_de_contenido (#PCDATA)>      
+      <!ELEMENT r_secciones (r_sección+)>
+         <!ELEMENT r_sección (s_título, s_contenido)>
+            <!ATTLIST r_sección
+               idsec ID #REQUIRED
+               n_páginas NMTOKEN #IMPLIED
+            >
+            <!ELEMENT s_título (#PCDATA)>
+            <!ELEMENT s_contenido EMPTY>
+               <!ATTLIST s_contenido
+                  enlace CDATA #IMPLIED
+               >
+                           
+
+<!ELEMENT periódicos (periódico+)>
+   <!ELEMENT periódico (p_índice, p_secciones)>
+      <!ATTLIST periódico
+         Id ID #REQUIRED 
+         tipo_clase (nacional|internacional) #REQUIRED
+         nombre NMTOKENS #REQUIRED
+         fecha_publicación NMTOKEN #REQUIRED
+         n_páginas NMTOKEN #IMPLIED
+      >
+      <!ELEMENT p_índice (#PCDATA)>   
+      <!ELEMENT p_secciones (p_sección+)>
+         <!ELEMENT p_sección (artículo+)>
+            <!ATTLIST p_sección
+               tipo_sección (opinión|nacional|internacional|económica|deportes) #REQUIRED
+               n_páginas NMTOKEN #IMPLIED
+            >
+            <!ELEMENT artículo (a_título, a_contenido)>
+               <!ATTLIST artículo
+                  autor NMTOKENS #IMPLIED
+               >
+            <!ELEMENT a_título (#PCDATA)>
+            <!ELEMENT a_contenido EMPTY>
+               <!ATTLIST a_contenido
+                  enlace CDATA #IMPLIED
+               >
